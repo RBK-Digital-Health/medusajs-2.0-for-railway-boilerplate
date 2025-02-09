@@ -4,7 +4,6 @@ import {
   AUTH_CORS,
   BACKEND_URL,
   COOKIE_SECRET,
-  DATABASE_URL,
   JWT_SECRET,
   REDIS_URL,
   RESEND_API_KEY,
@@ -28,7 +27,7 @@ loadEnv(process.env.NODE_ENV, process.cwd());
 
 const medusaConfig = {
   projectConfig: {
-    databaseUrl: DATABASE_URL,
+    databaseUrl: process.env.DATABASE_URL,
     databaseLogging: false,
     redisUrl: REDIS_URL,
     workerMode: WORKER_MODE,
